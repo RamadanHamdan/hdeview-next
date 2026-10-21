@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { randomUUID } from 'crypto';
 import fs from 'fs';
 import path from 'path';
 
@@ -11,7 +12,7 @@ export async function POST(request) {
     const sn = formData.get('sn') || '-';
     const issue = formData.get('issue') || '-';
 
-    if (!file) {
+    if (!file || typeof file.arrayBuffer !== 'function') {
       return NextResponse.json(
         { status: 'error', message: 'Tidak ada file yang diunggah.' },
         { status: 400 }
@@ -20,6 +21,22 @@ export async function POST(request) {
 
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
+    const fileType =
+      buffer.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))
+        ? 'png'
+        : buffer[0] === 0xff && buffer[1] === 0xd8 && buffer[2] === 0xff
+          ? 'jpg'
+          : buffer.toString('ascii', 0, 4) === 'RIFF' &&
+              buffer.toString('ascii', 8, 12) === 'WEBP'
+            ? 'webp'
+            : null;
+
+    if (!fileType) {
+      return NextResponse.json(
+        { status: 'error', message: 'Hanya file PNG, JPG, dan WebP yang diizinkan.' },
+        { status: 415 }
+      );
+    }
 
     // Save to public/uploads directory
     const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
@@ -27,8 +44,7 @@ export async function POST(request) {
       fs.mkdirSync(uploadsDir, { recursive: true });
     }
 
-    const sanitizedFileName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const fileName = `${Date.now()}_${sanitizedFileName}`;
+    const fileName = `${randomUUID()}.${fileType}`;
     const filePath = path.join(uploadsDir, fileName);
 
     fs.writeFileSync(filePath, buffer);
