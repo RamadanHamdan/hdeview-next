@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProdukAioPage() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -49,10 +50,10 @@ export default function ProdukAioPage() {
               <p className="text-base md:text-lg text-slate-600 mb-8 max-w-lg leading-relaxed font-light">
                 HDe PC All-in-One hadir dengan desain elegan berwarna putih dan performa Intel Core i5 generasi terbaru untuk mendukung produktivitas instansi Anda tanpa memakan ruang meja.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3">
                 <a
                   href="#specs"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest transition-all shadow-lg shadow-blue-600/20 active:scale-95"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-sm uppercase tracking-widest transition-all shadow-lg shadow-blue-600/20"
                 >
                   Cek Spesifikasi
                 </a>
@@ -69,8 +70,10 @@ export default function ProdukAioPage() {
             </div>
 
             <div className="relative flex justify-center">
-              <img
+              <Image
                 src="/img/Produk/aio/aio3.png"
+                width={500}
+                height={500}
                 className="w-full max-w-lg h-auto drop-shadow-2xl z-10 relative"
                 alt="HDe AIO K5-F White"
               />
@@ -91,28 +94,28 @@ export default function ProdukAioPage() {
               <i className="fas fa-microchip text-3xl text-blue-600 mb-6"></i>
               <h4 className="font-bold text-slate-900 mb-2">Intel Core i5</h4>
               <p className="text-xs text-slate-500 leading-relaxed italic">
-                i5-13500H High Performance Processor untuk multitasking stabil.
+                i5-13500H Desktop Processor untuk performa stabil.
               </p>
             </div>
             <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all">
               <i className="fas fa-memory text-3xl text-blue-600 mb-6"></i>
               <h4 className="font-bold text-slate-900 mb-2">8GB / 512GB SSD</h4>
               <p className="text-xs text-slate-500 leading-relaxed italic">
-                Multitasking cepat dengan penyimpanan SSD M.2 NVMe ultra cepat.
+                Multitasking cepat dengan penyimpanan SSD M.2.
               </p>
             </div>
             <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all">
               <i className="fab fa-windows text-3xl text-blue-600 mb-6"></i>
               <h4 className="font-bold text-slate-900 mb-2">Windows 11</h4>
               <p className="text-xs text-slate-500 leading-relaxed italic">
-                Sistem operasi modern terbaru siap pakai untuk instansi kerja.
+                Sistem operasi terbaru siap pakai untuk instansi kerja.
               </p>
             </div>
             <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all">
               <i className="fas fa-wifi text-3xl text-blue-600 mb-6"></i>
-              <h4 className="font-bold text-slate-900 mb-2">WiFi 5.0 & BT</h4>
+              <h4 className="font-bold text-slate-900 mb-2">WiFi 5.0</h4>
               <p className="text-xs text-slate-500 leading-relaxed italic">
-                Koneksi internet nirkabel kencang, stabil, dan bebas kabel semrawut.
+                Koneksi internet nirkabel kencang & stabil.
               </p>
             </div>
           </div>
@@ -131,9 +134,11 @@ export default function ProdukAioPage() {
             {/* Main Slide Viewer */}
             <div className="bg-slate-50 rounded-[3rem] p-8 md:p-12 border border-slate-200 shadow-lg flex flex-col items-center">
               <div className="w-full h-72 md:h-96 flex items-center justify-center mb-8">
-                <img
+                <Image
                   src={slides[activeSlide].img}
                   alt={slides[activeSlide].title}
+                  width={500}
+                  height={500}
                   className="max-h-full max-w-full object-contain drop-shadow-xl transition-all duration-500"
                 />
               </div>
@@ -188,15 +193,15 @@ export default function ProdukAioPage() {
               <tbody className="text-sm divide-y divide-slate-100">
                 <tr className="hover:bg-blue-50/50 transition">
                   <td className="p-6 font-bold text-slate-900">Model</td>
-                  <td className="p-6 text-slate-600 font-medium">HDe AIO (All-in-One Desktop PC K5-F)</td>
+                  <td className="p-6 text-slate-600 font-medium">HDe AIO (All-in-One Desktop PC)</td>
                 </tr>
                 <tr className="hover:bg-blue-50/50 transition">
                   <td className="p-6 font-bold text-slate-900">Layar</td>
-                  <td className="p-6 text-slate-600 font-medium">23.8" IPS Full HD (1920x1080) Wide Viewing Angle</td>
+                  <td className="p-6 text-slate-600 font-medium">23.8" IPS Full HD (1920x1080)</td>
                 </tr>
                 <tr className="hover:bg-blue-50/50 transition">
                   <td className="p-6 font-bold text-slate-900">Komponen Utama</td>
-                  <td className="p-6 text-slate-600 font-medium">Intel Core i5-13500H | RAM 8GB DDR4 | SSD 512GB M.2 NVMe</td>
+                  <td className="p-6 text-slate-600 font-medium">Intel Core i5-13500H | RAM 8GB DDR4 | SSD 512GB M.2</td>
                 </tr>
                 <tr className="hover:bg-blue-50/50 transition">
                   <td className="p-6 font-bold text-slate-900">Audio & Visual</td>
