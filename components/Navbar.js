@@ -69,7 +69,16 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center group relative py-1">
+          <Link
+            href="/"
+            onClick={(event) => {
+              if (pathname === '/') {
+                event.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            className="flex items-center group relative py-1"
+          >
             <div className="relative flex items-center justify-center min-w-[45px] md:min-w-[60px]">
               <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full scale-125 group-hover:scale-150 transition-transform duration-700 opacity-60"></div>
               {/* eslint-disable-next-line @next/next/no-img-element */}

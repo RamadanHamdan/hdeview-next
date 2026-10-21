@@ -123,28 +123,6 @@ export default function Footer() {
                   info@hdeview.com
                 </a>
               </div>
-
-              {/* Unit Bisnis */}
-              <div className="pt-4 border-t border-white/10 mt-2">
-                <span className="block text-[9px] font-black tracking-[0.2em] text-slate-500 uppercase mb-2">
-                  Unit Bisnis Utama
-                </span>
-                <a
-                  href="https://mabel.co.id"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 bg-white/5 p-3 rounded-2xl border border-white/10 hover:border-blue-500/40 transition-all"
-                >
-                  <div className="w-7 h-7 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all text-xs">
-                    <i className="fas fa-building"></i>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-white font-bold text-xs">Mabel.co.id</span>
-                    <span className="text-[9px] text-slate-400">CV. MABEL SOLUSI MANDIRI</span>
-                  </div>
-                  <i className="fas fa-chevron-right text-[10px] ml-auto text-slate-500 group-hover:text-white transition-all"></i>
-                </a>
-              </div>
             </div>
           </div>
         </div>

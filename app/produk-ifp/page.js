@@ -12,24 +12,24 @@ export default function ProdukIFP() {
 
   const productData = {
     65: { code: 'IWB65', tkdn: false, tkdnVal: 'Non-TKDN' },
-    75: { code: 'IWB75', tkdn: true, tkdnVal: 'TKDN+BMP 43.50%' },
-    86: { code: 'IWB86', tkdn: true, tkdnVal: 'TKDN+BMP 43.50%' },
-    98: { code: 'IWB98', tkdn: true, tkdnVal: 'TKDN+BMP 43.50%' },
-    110: { code: 'IWB110', tkdn: true, tkdnVal: 'TKDN+BMP 43.50%' },
+    75: { code: 'IWB75', tkdn: true, tkdnVal: 'TKDN+BMP' },
+    86: { code: 'IWB86', tkdn: true, tkdnVal: 'TKDN+BMP' },
+    98: { code: 'IWB98', tkdn: true, tkdnVal: 'TKDN+BMP' },
+    110: { code: 'IWB110', tkdn: true, tkdnVal: 'TKDN+BMP' },
   };
 
   const currentProduct = productData[size];
   const ramWindows = ram === '4-32' ? '8GB / 256GB' : '16GB / 512GB';
-  const modelCode = `HDE-${currentProduct.code}${ops !== 'none' ? '-OPS' : ''}-${ram}-SB`;
+  const modelCode = `HDE-${currentProduct.code}`;
 
   let addonText = '';
   if (addons.standing) addonText += '\n- Termasuk Standing Mount Mobile';
   if (addons.dongle) addonText += '\n- Termasuk Wireless Dongle';
 
   const waMessage = encodeURIComponent(
-    `Halo HDe Technology, saya ingin bertanya tentang:\n\n` +
+    `Halo HDe , saya ingin bertanya tentang:\n\n` +
       `Model: ${modelCode}\n` +
-      `Ukuran Layar: ${size} Inch\n` +
+      `Ukuran: ${size} Inch\n` +
       `RAM Android 13: ${ram} GB\n` +
       `RAM Windows 11: ${ramWindows}\n` +
       `Modul OPS: ${ops.toUpperCase()}\n` +
@@ -44,21 +44,21 @@ export default function ProdukIFP() {
       icon: 'fa-pen-nib',
       color: 'blue',
       img: '/img/aksesoris/1.jpg',
-      desc: '1. Passive EMR Technology (Tanpa baterai, siap pakai setiap saat).\n2. Mendukung hingga 20 titik sentuh simultan dengan respon instan < 5ms.\n3. Dilengkapi sistem magnetik yang melekat rapi pada sisi bezel panel.',
+      desc: '1. Passive EMR Technology (Tanpa baterai, siap pakai setiap saat).\n2. Mendukung hingga 20 titik sentuh.\n3. Dilengkapi sistem magnetik yang melekat rapi pada sisi bezel panel.',
     },
     remote: {
-      title: 'Remote Control Pintar',
+      title: 'Remote Control',
       icon: 'fa-tower-broadcast',
       color: 'amber',
       img: '/img/aksesoris/remote.jpg',
-      desc: '1. Akses navigasi instan ke Home, Source input, dan Freeze display layar.\n2. Built-in laser pointer untuk memandu presentasi di ruang rapat besar.\n3. Kontrol volume, shutdown, dan switch OS dengan satu sentuhan.',
+      desc: 'Akses navigasi instan ke Home, Source input, dan Freeze display layar.',
     },
     wallmount: {
-      title: 'Heavy-Duty Wallmount Kit',
+      title: 'Wallmount Kit',
       icon: 'fa-border-all',
       color: 'emerald',
       img: '/img/aksesoris/brack.png',
-      desc: '1. Bracket baja cold-rolled steel dengan kapasitas beban hingga 150kg.\n2. Standar VESA compliant kompatibel dengan ukuran 65" hingga 110".\n3. Dilengkapi mekanisme safety lock anti-jatuh saat digunakan.',
+      desc: 'Bracket baja kuat untuk pemasangan dinding',
     },
   };
 
@@ -165,23 +165,15 @@ export default function ProdukIFP() {
               <div className="grid sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-700">
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
                   <i className="fas fa-check-circle text-blue-600 text-sm"></i>
-                  <span>4K UHD Anti-Glare 3.5mm Tempered Glass</span>
+                  <span>4K Ultra HD Display with Anti-Glare</span>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
                   <i className="fas fa-check-circle text-blue-600 text-sm"></i>
-                  <span>Zero-Fit Lamination Writing System</span>
+                  <span>20-Point Multi Infrared Touch</span>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
                   <i className="fas fa-check-circle text-blue-600 text-sm"></i>
-                  <span>40-Point Multi Infrared Touch</span>
-                </div>
-                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <i className="fas fa-check-circle text-blue-600 text-sm"></i>
-                  <span>Dual OS: Android 13 + Windows 11</span>
-                </div>
-                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <i className="fas fa-check-circle text-blue-600 text-sm"></i>
-                  <span>Smart 4K Camera 48M & 8 Array Mic</span>
+                  <span>Dual OS: Android + Windows</span>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
                   <i className="fas fa-check-circle text-blue-600 text-sm"></i>
@@ -197,16 +189,20 @@ export default function ProdukIFP() {
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
                 <div>
                   <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest block">
-                    Smart Configurator
+                    Konfigurasi Unit
                   </span>
                   <h2 className="text-2xl font-black text-slate-900 tracking-tight">HDe IFP Series</h2>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block text-[10px] font-black text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 uppercase">
+                  <span className={`inline-block text-[10px] font-black ${
+                    currentProduct.tkdn
+                    ? 'text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 uppercase'
+                    : 'text-orange-700 bg-orange-50 px-3 py-1 rounded-full border border-orange-200 uppercase'
+                    }`}>
                     {currentProduct.tkdnVal}
                   </span>
                   <span className="text-[10px] text-slate-400 block font-mono font-bold mt-1">
-                    {modelCode}
+                    HDE-MODEL-CODE
                   </span>
                 </div>
               </div>
@@ -333,7 +329,7 @@ export default function ProdukIFP() {
                         readOnly
                         className="w-4 h-4 text-blue-600 rounded"
                       />
-                      <span className="text-xs font-semibold text-slate-800">Standing Mount Mobile (Beban 300kg)</span>
+                      <span className="text-xs font-semibold text-slate-800">Standing Mount (Mobile)</span>
                     </div>
                     <span className="text-[10px] font-bold text-blue-600 uppercase">Optional</span>
                   </div>
@@ -351,7 +347,7 @@ export default function ProdukIFP() {
                         readOnly
                         className="w-4 h-4 text-blue-600 rounded"
                       />
-                      <span className="text-xs font-semibold text-slate-800">Wireless Screen Dongle (One-Click Share)</span>
+                      <span className="text-xs font-semibold text-slate-800">Wireless Dongle</span>
                     </div>
                     <span className="text-[10px] font-bold text-blue-600 uppercase">Optional</span>
                   </div>
@@ -365,14 +361,6 @@ export default function ProdukIFP() {
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
                     <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">Status: Ready Stock</span>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => setModalType('tkdn')}
-                    className="text-[11px] font-bold text-blue-600 hover:underline flex items-center gap-1"
-                  >
-                    <i className="fas fa-file-pdf"></i>
-                    <span>Lihat Sertifikat TKDN</span>
-                  </button>
                 </div>
 
                 <a
@@ -421,7 +409,7 @@ export default function ProdukIFP() {
                   />
                 </div>
 
-                <div className="flex gap-3">
+                {/* <div className="flex gap-3">
                   <a
                     href="/img/sertifikat/ifphde.png"
                     download="Sertifikat_TKDN_HDe_IFP.png"
@@ -435,7 +423,7 @@ export default function ProdukIFP() {
                   >
                     Tutup
                   </button>
-                </div>
+                </div> */}
               </div>
             ) : (
               <div>
@@ -458,9 +446,6 @@ export default function ProdukIFP() {
                     <h3 className="text-lg font-black text-slate-900">
                       {accessoryDetails[modalType].title}
                     </h3>
-                    <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">
-                      Included In Box Standard
-                    </span>
                   </div>
                 </div>
 

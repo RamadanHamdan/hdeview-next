@@ -258,13 +258,6 @@ Mohon bantuannya untuk informasi lebih lanjut. Terima kasih.`;
                 <span className="font-black uppercase tracking-widest text-xs">Smart Configurator</span>
                 <i className="fas fa-arrow-down text-xs group-hover:translate-y-1 transition-transform"></i>
               </a>
-
-              <Link
-                href="/videotron-guide"
-                className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all flex items-center gap-3 w-full sm:w-auto justify-center"
-              >
-                <i className="fas fa-book-open"></i> Buka Panduan Teknis
-              </Link>
             </div>
           </div>
         </div>
@@ -495,7 +488,7 @@ Mohon bantuannya untuk informasi lebih lanjut. Terima kasih.`;
                   Layanan Khusus
                 </span>
                 <span className="text-base font-black text-white uppercase flex items-center gap-3">
-                  On-Site Service Seluruh Indonesia
+                  On-Site Service
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 </span>
               </div>
@@ -503,7 +496,7 @@ Mohon bantuannya untuk informasi lebih lanjut. Terima kasih.`;
 
             <div className="w-full md:w-auto flex justify-start md:justify-end">
               <span className="text-xs font-black text-emerald-400 bg-emerald-400/10 px-5 py-2.5 rounded-xl border border-emerald-400/20 tracking-wider">
-                TKDN + BMP 40.25% Resmi Kemenperin
+                TKDN + BMP 40.25%
               </span>
             </div>
           </div>
@@ -521,14 +514,14 @@ Mohon bantuannya untuk informasi lebih lanjut. Terima kasih.`;
                 </span>
                 <h2 className="text-3xl md:text-4xl font-black mb-3">Butuh Panduan Teknis?</h2>
                 <p className="text-slate-300 max-w-md text-sm">
-                  Pelajari cara maintenance mandiri, wiring kabinet, dan tutorial setting NovaLCT di pusat panduan kami.
+                  Pelajari cara maintenance mandiri dan tutorial setting di pusat panduan kami.
                 </p>
               </div>
               <Link
                 href="/videotron-guide"
                 className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-all shadow-xl flex items-center gap-3 active:scale-95 text-xs uppercase tracking-widest"
               >
-                <i className="fas fa-book-open text-blue-600"></i> Buka Panduan Teknis
+              <i className="fas fa-book-open text-blue-600"></i> Buka Panduan
               </Link>
             </div>
           </div>

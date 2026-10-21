@@ -141,9 +141,8 @@ export default function Home() {
           return (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center ${
-                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                }`}
             >
               {/* Slide Background Image */}
               <div className="absolute inset-0 overflow-hidden">
@@ -217,9 +216,8 @@ export default function Home() {
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
-              className={`h-2 transition-all duration-300 rounded-full ${
-                idx === currentSlide ? 'w-8 bg-blue-500' : 'w-2 bg-white/40 hover:bg-white/70'
-              }`}
+              className={`h-2 transition-all duration-300 rounded-full ${idx === currentSlide ? 'w-8 bg-blue-500' : 'w-2 bg-white/40 hover:bg-white/70'
+                }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
@@ -258,7 +256,8 @@ export default function Home() {
                   Interactive Flat Panel
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed mb-6">
-                  Layar sentuh 4K cerdas dengan 40-point touch, dual OS (Android & Windows), kamera 4K dan mic array untuk presentasi interaktif.
+                  {/* Layar sentuh 4K cerdas dengan 40-point touch, dual OS (Android & Windows), kamera 4K dan mic array untuk presentasi interaktif. */}
+                  Layar sentuh 4k cerdas dengan 40-point touch untuk presentasi interaktif dan kolaborasi tanpa batas di ruang kelas maupun boardroom.
                 </p>
               </div>
               <Link
@@ -290,7 +289,8 @@ export default function Home() {
                   HDe LED Videotron
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed mb-6">
-                  Visual raksasa dengan kecerahan hingga 5000 nits, high refresh 3840Hz untuk indoor (Fine Pitch) maupun outdoor advertising IP65.
+                  {/* Visual raksasa dengan kecerahan hingga 5000 nits, high refresh 3840Hz untuk indoor (Fine Pitch) maupun outdoor advertising IP65. */}
+                  Tampilan visual raksasa dengan kecerahan tinggi untuk kebutuhan indoor (Fine Pitch) maupun outdoor advertising
                 </p>
               </div>
               <Link
@@ -322,7 +322,8 @@ export default function Home() {
                   Meeting Recording System
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed mb-6">
-                  Sistem audio-visual otomatis berbasis hardware dengan kamera auto-tracking AI dan audio processor untuk notulensi akurat dan streaming.
+                  {/* Sistem audio-visual otomatis berbasis hardware dengan kamera auto-tracking AI dan audio processor untuk notulensi akurat dan streaming. */}
+                  Dokumentasikan diskusi penting dengan sistem audio-visual otomatis yang cerdas dan terintegrasi.
                 </p>
               </div>
               <Link
@@ -354,7 +355,8 @@ export default function Home() {
                   HDe AIO Series
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed mb-6">
-                  Solusi PC All-in-One elegan dengan material Mg-Al Alloy, performa workstation, dan layar ultra tipis untuk ruang kerja modern.
+                  {/* Solusi PC All-in-One elegan dengan material Mg-Al Alloy, performa workstation, dan layar ultra tipis untuk ruang kerja modern. */}
+                  Inovasi minimalis, performa maksimal. HDe AIO menggabungkan desain premium, performa powerful, dan fleksibilitas untuk mendukung produktivitas di ruang kerja modern.
                 </p>
               </div>
               <Link
@@ -414,7 +416,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
-                HDe Technology hadir sebagai mitra strategis dalam menghadirkan ekosistem digital kelas dunia. Kami menggabungkan inovasi hardware termutakhir dengan kepatuhan regulasi lokal LKPP dan TKDN demi keandalan operasional jangka panjang.
+                HDe Technology hadir sebagai mitra strategis dalam menghadirkan ekosistem digital mutakhir. Kami mengkombinasikan perangkat keras kelas dunia dengan kepatuhan regulasi lokal untuk hasil yang optimal.
               </p>
             </div>
 
@@ -425,7 +427,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm mb-1">Standar Sertifikasi Global & Lokal</h4>
-                  <p className="text-xs text-slate-500">Lulus uji POSTEL SDPPI Kominfo dan standar internasional RoHS & CE.</p>
+                  <p className="text-xs text-slate-500">Lulus uji POSTEL SDPPI dan standar internasional (RoHS).</p>
                 </div>
               </div>
 
@@ -435,7 +437,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm mb-1">Dukungan TKDN & E-Katalog LKPP</h4>
-                  <p className="text-xs text-slate-500">Memenuhi regulasi konten lokal untuk pengadaan instansi pemerintah, BUMN, dan universitas.</p>
+                  <p className="text-xs text-slate-500">Berkomitmen pada konten lokal untuk kebutuhan instansi pemerintah (LKPP).</p>
                 </div>
               </div>
 
@@ -445,7 +447,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm mb-1">Layanan Purna Jual & On-Site Service</h4>
-                  <p className="text-xs text-slate-500">Dukungan suku cadang original dan teknisi berpengalaman ke seluruh Indonesia.</p>
+                  <p className="text-xs text-slate-500">Dukungan teknis untuk menjamin kelancaran operasional.</p>
                 </div>
               </div>
             </div>
@@ -493,15 +495,15 @@ export default function Home() {
                     </div>
                     <div>
                       <h5 className="font-bold text-xs uppercase tracking-wider text-white mb-1">Suku Cadang Asli</h5>
-                      <p className="text-xs text-blue-100/70 leading-relaxed">Jaminan penggantian komponen menggunakan modul original untuk menjaga stabilitas jangka panjang.</p>
+                      <p className="text-xs text-blue-100/70 leading-relaxed">Jaminan penggantian komponen menggunakan modul original untuk menjaga performa unit.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-10 relative z-10 border-t border-white/10 text-xs text-blue-200">
+              {/* <div className="pt-10 relative z-10 border-t border-white/10 text-xs text-blue-200">
                 Layanan aktif Senin - Jumat: 08.30 - 17.30 WIB
-              </div>
+              </div> */}
             </div>
 
             {/* Right Column: Support Ticket Form */}
@@ -573,11 +575,10 @@ export default function Home() {
                               setCategory(cat.label);
                               setIsCategoryOpen(false);
                             }}
-                            className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer text-xs font-bold transition ${
-                              category === cat.label
-                                ? 'bg-blue-600 text-white'
-                                : 'text-slate-300 hover:bg-white/10'
-                            }`}
+                            className={`flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer text-xs font-bold transition ${category === cat.label
+                              ? 'bg-blue-600 text-white'
+                              : 'text-slate-300 hover:bg-white/10'
+                              }`}
                           >
                             <i className={`fas ${cat.icon} text-xs`}></i>
                             <span>{cat.label}</span>
@@ -634,7 +635,7 @@ export default function Home() {
       <section id="klien" className="py-20 bg-slate-50 border-t border-slate-200/60">
         <div className="container mx-auto px-6 text-center">
           <span className="text-blue-600 font-bold tracking-[0.3em] uppercase text-[10px] mb-3 block">
-            Partnership
+            Partners
           </span>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight uppercase mb-8">
             Kemitraan Strategis
@@ -643,23 +644,21 @@ export default function Home() {
           <div className="flex justify-center gap-3 mb-10">
             <button
               onClick={() => setPartnerFilter('dinas')}
-              className={`px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all border shadow-sm ${
-                partnerFilter === 'dinas'
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'bg-white text-slate-600 border-slate-200 hover:border-blue-500'
-              }`}
+              className={`px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all border shadow-sm ${partnerFilter === 'dinas'
+                ? 'bg-blue-600 text-white border-blue-600'
+                : 'bg-white text-slate-600 border-slate-200 hover:border-blue-500'
+                }`}
             >
-              Pemerintah & Publik
+              Pemerintah
             </button>
             <button
               onClick={() => setPartnerFilter('corporate')}
-              className={`px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all border shadow-sm ${
-                partnerFilter === 'corporate'
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'bg-white text-slate-600 border-slate-200 hover:border-blue-500'
-              }`}
+              className={`px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all border shadow-sm ${partnerFilter === 'corporate'
+                ? 'bg-blue-600 text-white border-blue-600'
+                : 'bg-white text-slate-600 border-slate-200 hover:border-blue-500'
+                }`}
             >
-              Dinas & Korporat
+              Dinas
             </button>
           </div>
 
@@ -717,13 +716,12 @@ export default function Home() {
                       <span className="text-[10px] font-black text-blue-600 uppercase tracking-wider block mb-0.5">
                         {faq.cat}
                       </span>
-                      <h4 className="text-sm font-bold text-slate-800">{faq.q}</h4>
+                      <h4 className="text-sm uppercase font-bold text-slate-800">{faq.q}</h4>
                     </div>
                   </div>
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                      isOpen ? 'bg-blue-600 text-white rotate-45' : 'bg-slate-100 text-slate-400'
-                    }`}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-blue-600 text-white rotate-45' : 'bg-slate-100 text-slate-400'
+                      }`}
                   >
                     <i className="fas fa-plus text-xs"></i>
                   </div>
@@ -739,7 +737,7 @@ export default function Home() {
               </div>
             );
           })}
-        </div>
+        </div>  
 
         <div className="mt-8 text-center">
           <Link
@@ -750,7 +748,28 @@ export default function Home() {
             <i className="fas fa-arrow-right text-[10px]"></i>
           </Link>
         </div>
+        {/* Support Help Banner */}
+        <div className="bg-slate-900 rounded-[3rem] p-10 md:p-14 text-white relative overflow-hidden mt-12">
+          <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-black mb-2">Butuh bantuan teknis langsung?</h2>
+              <p className="text-slate-400 text-xs md:text-sm">
+                Tim teknisi HDe siap membantu panduan instalasi, kalibrasi, dan troubleshooting unit Anda.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/628194010189"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl text-xs uppercase tracking-widest whitespace-nowrap active:scale-95 flex items-center gap-2"
+            >
+              <i className="fab fa-whatsapp text-lg"></i>
+              <span>Hubungi Teknisi HDe</span>
+            </a>
+          </div>
+        </div>
       </section>
+
 
       {/* ===================== EDUQUIZ DOWNLOAD BANNER ===================== */}
       <section className="py-20 bg-slate-950 text-white relative overflow-hidden border-t border-white/10">

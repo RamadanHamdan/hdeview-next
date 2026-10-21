@@ -12,7 +12,7 @@ export default function PortofolioPage() {
       title: 'Interactive Flat Panel - CV Inarum',
       category: 'Swasta',
       tech: 'Tech: 4K IFP 98" Touchscreen',
-      badgeColor: 'text-blue-600 bg-blue-50 border-blue-200 ml-8',
+      badgeColor: 'text-blue-600 bg-blue-50 border-blue-200',
       desc: 'Instalasi Videotron 4K ukuran 98 Inci pada cv Inarum',
       img: '/img/Produk/home/proyek/ARI-0001-140426-FotoBarang-HDe-98_inch.jpeg',
     },
@@ -23,6 +23,14 @@ export default function PortofolioPage() {
       badgeColor: 'text-emerald-600 bg-emerald-50 border-emerald-200',
       desc: 'Instalasi videotron indoor seluas 15m² dengan kerapatan pixel tinggi dan refresh rate 3840Hz untuk presentasi korporat.',
       img: '/img/Produk/home/proyek/Gemini_Generated_Image_10y43110y43110y4.png',
+    },
+    {
+      title: 'Command Center - Dinas Kominfo',
+      category: 'Pemerintahan',
+      tech: 'Tech: Auto Tracking AI PTZ Camera',
+      badgeColor: 'text-amber-600 bg-amber-50 border-amber-200',
+      desc: 'Integrasi sistem perekaman rapat cerdas yang mendukung transparansi operasional data kota tanpa operator kamera.',
+      img: '/img/Produk/home/proyek/mrsroom.png',
     },
     {
       title: 'Command Center - Dinas Kominfo',
@@ -65,8 +73,8 @@ export default function PortofolioPage() {
                     src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    width={500}
-                    height={500}
+                    width={1080}
+                    height={1080}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                     <span className="bg-white/20 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase border border-white/20">
